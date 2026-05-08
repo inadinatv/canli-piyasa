@@ -41,14 +41,18 @@ if response.status_code == 200:
             
             .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
             
-            .kart { background: #1e293b; border-radius: 12px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border-top: 3px solid #fbbf24; position: relative; }
-            .isim { font-size: 15px; font-weight: 600; color: #f1f5f9; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #334155; padding-bottom: 8px; }
+            .kart { background: #1e293b; border-radius: 12px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border-top: 3px solid #fbbf24; }
+            
+            /* Üst üste binmeyi çözen yeni bölüm */
+            .ust-kisim { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #334155; padding-bottom: 8px; gap: 8px; }
+            
+            .isim { font-size: 15px; font-weight: 600; color: #f1f5f9; display: flex; align-items: center; gap: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
             
             .fiyat-satir { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 14px; }
             .etiket { color: #94a3b8; font-size: 12px; }
             .deger { font-weight: 600; color: #38bdf8; }
             
-            .degisim { position: absolute; top: 12px; right: 12px; font-size: 12px; font-weight: 600; padding: 3px 6px; border-radius: 4px; }
+            .degisim { font-size: 12px; font-weight: 600; padding: 4px 8px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; }
             .artise { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
             .dususte { background: rgba(239, 68, 68, 0.2); color: #f87171; }
             .notr { background: rgba(148, 163, 184, 0.2); color: #94a3b8; }
@@ -91,8 +95,10 @@ if response.status_code == 200:
             
             html_orta += f"""
             <div class="kart">
-                <div class="degisim {renk_class}">{yon_ikon} %{temiz_degisim}</div>
-                <div class="isim">{ikon} {gorunen_isim}</div>
+                <div class="ust-kisim">
+                    <div class="isim">{ikon} {gorunen_isim}</div>
+                    <div class="degisim {renk_class}">{yon_ikon} %{temiz_degisim}</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
                     <span class="deger">{alis} ₺</span>
