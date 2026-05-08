@@ -14,14 +14,18 @@
             
             .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
             
-            .kart { background: #1e293b; border-radius: 12px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border-top: 3px solid #fbbf24; position: relative; }
-            .isim { font-size: 15px; font-weight: 600; color: #f1f5f9; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid #334155; padding-bottom: 8px; }
+            .kart { background: #1e293b; border-radius: 12px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border-top: 3px solid #fbbf24; }
+            
+            /* Üst üste binmeyi çözen yeni bölüm */
+            .ust-kisim { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #334155; padding-bottom: 8px; gap: 8px; }
+            
+            .isim { font-size: 15px; font-weight: 600; color: #f1f5f9; display: flex; align-items: center; gap: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
             
             .fiyat-satir { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 14px; }
             .etiket { color: #94a3b8; font-size: 12px; }
             .deger { font-weight: 600; color: #38bdf8; }
             
-            .degisim { position: absolute; top: 12px; right: 12px; font-size: 12px; font-weight: 600; padding: 3px 6px; border-radius: 4px; }
+            .degisim { font-size: 12px; font-weight: 600; padding: 4px 8px; border-radius: 6px; white-space: nowrap; flex-shrink: 0; }
             .artise { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
             .dususte { background: rgba(239, 68, 68, 0.2); color: #f87171; }
             .notr { background: rgba(148, 163, 184, 0.2); color: #94a3b8; }
@@ -38,60 +42,70 @@
         <div class="grid-container">
     
             <div class="kart">
-                <div class="degisim artise">▲ %0,27</div>
-                <div class="isim">💵 Dolar</div>
+                <div class="ust-kisim">
+                    <div class="isim">💵 Dolar</div>
+                    <div class="degisim artise">▲ %0,27</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
-                    <span class="deger">45,3588 ₺</span>
+                    <span class="deger">45,3626 ₺</span>
                 </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Satış:</span>
-                    <span class="deger">45,3698 ₺</span>
+                    <span class="deger">45,3657 ₺</span>
                 </div>
             </div>
             
             <div class="kart">
-                <div class="degisim artise">▲ %0,42</div>
-                <div class="isim">💶 Euro</div>
+                <div class="ust-kisim">
+                    <div class="isim">💶 Euro</div>
+                    <div class="degisim artise">▲ %0,41</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
-                    <span class="deger">53,4457 ₺</span>
+                    <span class="deger">53,4369 ₺</span>
                 </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Satış:</span>
-                    <span class="deger">53,4547 ₺</span>
+                    <span class="deger">53,4540 ₺</span>
                 </div>
             </div>
             
             <div class="kart">
-                <div class="degisim artise">▲ %0,46</div>
-                <div class="isim">💷 Sterlin</div>
+                <div class="ust-kisim">
+                    <div class="isim">💷 Sterlin</div>
+                    <div class="degisim artise">▲ %0,45</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
-                    <span class="deger">61,8243 ₺</span>
+                    <span class="deger">61,8217 ₺</span>
                 </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Satış:</span>
-                    <span class="deger">61,8403 ₺</span>
+                    <span class="deger">61,8379 ₺</span>
                 </div>
             </div>
             
             <div class="kart">
-                <div class="degisim artise">▲ %0,86</div>
-                <div class="isim">🪙 Gram Altın</div>
+                <div class="ust-kisim">
+                    <div class="isim">🪙 Gram Altın</div>
+                    <div class="degisim artise">▲ %0,84</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
-                    <span class="deger">6.874,24 ₺</span>
+                    <span class="deger">6.872,19 ₺</span>
                 </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Satış:</span>
-                    <span class="deger">6.875,06 ₺</span>
+                    <span class="deger">6.873,13 ₺</span>
                 </div>
             </div>
             
             <div class="kart">
-                <div class="degisim dususte">▼ %-0,26</div>
-                <div class="isim">🎖️ Çeyrek Altın</div>
+                <div class="ust-kisim">
+                    <div class="isim">🎖️ Çeyrek Altın</div>
+                    <div class="degisim dususte">▼ %-0,26</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
                     <span class="deger">11.021,24 ₺</span>
@@ -103,8 +117,10 @@
             </div>
             
             <div class="kart">
-                <div class="degisim dususte">▼ %-0,26</div>
-                <div class="isim">🏅 Yarım Altın</div>
+                <div class="ust-kisim">
+                    <div class="isim">🏅 Yarım Altın</div>
+                    <div class="degisim dususte">▼ %-0,26</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
                     <span class="deger">21.973,60 ₺</span>
@@ -116,8 +132,10 @@
             </div>
             
             <div class="kart">
-                <div class="degisim dususte">▼ %-0,26</div>
-                <div class="isim">🏆 Tam Altın</div>
+                <div class="ust-kisim">
+                    <div class="isim">🏆 Tam Altın</div>
+                    <div class="degisim dususte">▼ %-0,26</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
                     <span class="deger">44.084,97 ₺</span>
@@ -129,22 +147,24 @@
             </div>
             
             <div class="kart">
-                <div class="degisim artise">▲ %2,75</div>
-                <div class="isim">⛓️ Gümüş</div>
+                <div class="ust-kisim">
+                    <div class="isim">⛓️ Gümüş</div>
+                    <div class="degisim artise">▲ %2,43</div>
+                </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Alış:</span>
-                    <span class="deger">117,14 ₺</span>
+                    <span class="deger">116,78 ₺</span>
                 </div>
                 <div class="fiyat-satir">
                     <span class="etiket">Satış:</span>
-                    <span class="deger">117,22 ₺</span>
+                    <span class="deger">116,85 ₺</span>
                 </div>
             </div>
             
         </div>
         <div class="footer">
             © 2026 <span class="marka">İnadına TV</span> Özel Servisi<br>
-            Son Güncelleme: 2026-05-08 19:45:02
+            Son Güncelleme: 2026-05-08 20:00:02
         </div>
     </body>
     </html>
